@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farro | Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Resume Modal Styles */
+    #resumeModal {
+      display: none;
+      position: fixed;
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      height: 90%;
+      background: white;
+      border: 2px solid #444;
+      z-index: 1000;
+      padding: 20px;
+      overflow-y: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #resumeModal .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #resumeModal h2, #resumeModal h3 {
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+      <button id="darkModeToggle">🌓</button>
+    </nav>
+  </header>
+
+  <section id="about" class="section fade-in">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a passionate web developer skilled in frontend and backend technologies. I specialize in building responsive and high-performance websites and applications.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section fade-in">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+        <li>MongoDB</li>
+        <li>Git</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section fade-in">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A portfolio website built with responsive layout and dark mode.</p>
+      </div>
+      <div class="project">
+        <h3>Professional Code Editor</h3>
+        <p>A browser-based code editor that allows users to write and preview HTML, CSS, and JavaScript in real-time. Inspired by vs code editor, built using pure JavaScript and iframes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="section fade-in">
+    <div class="container">
+      <h2>Resume</h2>
+      <button onclick="document.getElementById('resumeModal').style.display='block'" class="btn">Open Resume</button>
+    </div>
+  </section>
+
+  <!-- Resume Popup Modal -->
+  <div id="resumeModal">
+    <button class="close-btn" onclick="document.getElementById('resumeModal').style.display='none'">X</button>
+    <h2>Ansari Mohammad Farhan</h2>
+    <p><strong>Email:</strong> forwebwork334@gmail.com | <strong>Phone:</strong> 8591981168</p>
+    <p><strong>Location:</strong> Mumbai</p>
+
+    <h3>Career Objective</h3>
+    <p>Passionate and creative Web Developer with hands-on experience in building responsive and dynamic web applications. Looking to contribute technical expertise to a forward-thinking team.</p>
+
+    <h3>Technical Skills</h3>
+    <ul>
+      <li>HTML, CSS, JavaScript, React.js, Node.js, Git, Responsive Design, Web Optimization</li>
+    </ul>
+
+    <h3>Projects</h3>
+    <ul>
+      <li><strong>Portfolio Website:</strong> A personal website showcasing skills, projects, and resume.</li>
+      <li><strong>Professional Code Editor:</strong> A browser-based code editor built with HTML, CSS, and JavaScript.</li>
+    </ul>
+
+    <h3>Education</h3>
+    <p>B.Sc. in Computer Science<br>XYZ University, Mumbai<br>Graduated: 2024</p>
+
+    <h3>Experience</h3>
+    <p>Freelance Web Developer (2023 - Present)<br>• Built responsive websites for small businesses and startups<br>• Worked on portfolios and single-page apps</p>
+
+    <h3>Languages</h3>
+    <p>English, Hindi</p>
+
+    <h3>Interests</h3>
+    <p>Coding, UI/UX Design, Learning new technologies</p>
+  </div>
+
+  <section id="contact" class="section fade-in">
+    <div class="container">
+      <h2>Contact</h2>
+      <form class="contact-form" action="https://formspree.io/f/xrblebbl" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="thank-you" style="display:none; color: green;">Thank you! Your message has been sent.</p>
+
+      <div class="socials">
+        <a href="https://github.com/" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Farro. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
